@@ -11,11 +11,13 @@ namespace week2
         #region Fields
         private string _name;
         private DateTime _birthday;
+        private int _id;
         #endregion
 
         #region Ctors
         public Person(string name = "", int year = 1970, int month = 1, int day = 1)
         {
+            _id = 1;
             _name = name;
             _birthday = new DateTime(year, month, day);
         }
@@ -28,6 +30,7 @@ namespace week2
             set { _name = value; }
         }
 
+        public int Id { get; }
         public DateTime Birthday
         { get => _birthday; set => _birthday = value; }
 

@@ -20,9 +20,11 @@ namespace week2
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        Student[] students;
         public MainWindow()
         {
+            students = new Student[10];
+            int length = students.Length;
             InitializeComponent();
         }
 
@@ -47,7 +49,8 @@ namespace week2
             //}
 
             Student st = new Student(tbConsole.Text);
-            tbConsole.Text = "Welcome " + st;
+           // st.Id = 5;
+            tbConsole.Text = "Welcome " + st + st.Id;
 
 
         }
