@@ -20,6 +20,7 @@ namespace week2
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,23 +30,26 @@ namespace week2
         {
             //int num2;
             //Int32.TryParse(tbConsole.Text,out num2);
+            //try
+            //{
+            //    int num = Int32.Parse(tbConsole.Text);
+            //    tbConsole.Text = "Welcome " + num;
+            //}
+            //catch (Exception ex)
+            //{
 
-            try
-            {
-                int num = Int32.Parse(tbConsole.Text);
-                tbConsole.Text = "Welcome " + num;
-            }
-            catch (Exception ex)
-            {
+            //    tbConsole.Text = ex.Message;
+            //}
+            //finally
+            //{
+            //    tbConsole.Text = tbConsole.Text + "\n";
+            //    tbConsole.Text = tbConsole.Text + "Try again";
+            //}
 
-                tbConsole.Text = ex.Message;
-            }
-            finally
-            {
-                tbConsole.Text = tbConsole.Text + "\n";
-                tbConsole.Text = tbConsole.Text + "Try again";
-            }
-            
+            Student st = new Student(tbConsole.Text);
+            tbConsole.Text = "Welcome " + st;
+
+
         }
     }
 }
