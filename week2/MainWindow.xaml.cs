@@ -24,5 +24,28 @@ namespace week2
         {
             InitializeComponent();
         }
+
+        private void pbConsole_Click(object sender, RoutedEventArgs e)
+        {
+            //int num2;
+            //Int32.TryParse(tbConsole.Text,out num2);
+
+            try
+            {
+                int num = Int32.Parse(tbConsole.Text);
+                tbConsole.Text = "Welcome " + num;
+            }
+            catch (Exception ex)
+            {
+
+                tbConsole.Text = ex.Message;
+            }
+            finally
+            {
+                tbConsole.Text = tbConsole.Text + "\n";
+                tbConsole.Text = tbConsole.Text + "Try again";
+            }
+            
+        }
     }
 }
