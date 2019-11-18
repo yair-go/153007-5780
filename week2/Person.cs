@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace week2
 {
-    public class Person
+    public class Person : IComparable
     {
         #region Fields
         private string _name;
@@ -31,12 +31,18 @@ namespace week2
         }
 
         public int Id { get; }
+
         public DateTime Birthday
         { get => _birthday; set => _birthday = value; }
 
         public int Age
         {
             get { return DateTime.Now.Year - Birthday.Year; }
+        }
+
+        public int CompareTo(object obj)
+        {
+            return this.Age.CompareTo((obj as Person).Age);
         }
         #endregion
 

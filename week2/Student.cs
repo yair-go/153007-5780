@@ -15,6 +15,8 @@ namespace week2
             _average = average;
         }
 
+        public int Average { get => _average; set => _average = value; }
+
         public override string ToString()
         {
             return base.ToString() + " " + _average;

@@ -23,9 +23,19 @@ namespace week2
         Student[] students;
         public MainWindow()
         {
+            Random rand = new Random(DateTime.Now.Millisecond);
             students = new Student[10];
             int length = students.Length;
+            for (int i = 0; i < students.Length; i++)
+            {
+                students[i] = new Student("a", rand.Next(1980,2000));
+            }
             InitializeComponent();
+            List<Student> studentList = students.ToList();
+            studentList.Sort();
+            
+
+
         }
 
         private void pbConsole_Click(object sender, RoutedEventArgs e)
@@ -52,6 +62,18 @@ namespace week2
            // st.Id = 5;
             tbConsole.Text = "Welcome " + st + st.Id;
 
+            Person p = st; // c++ equil Person *p = &st;
+
+
+            if (p is Student)
+            {
+
+                tbConsole.Text = tbConsole.Text + "\n";
+                tbConsole.Text = tbConsole.Text + p.GetType() + "\n";
+                tbConsole.Text = tbConsole.Text + (p as Student).Average;
+
+            }
+            
 
         }
     }
