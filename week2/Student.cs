@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace week2
 {
-    class Student : Person
+    public class Student : Person
     {
         private int _average;
 
@@ -20,6 +20,11 @@ namespace week2
         public override string ToString()
         {
             return base.ToString() + " " + _average;
+        }
+
+        public String Something()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

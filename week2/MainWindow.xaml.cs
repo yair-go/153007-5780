@@ -30,14 +30,29 @@ namespace week2
             {
                 students[i] = new Student("a", rand.Next(1980,2000));
             }
-            InitializeComponent();
+         
             List<Student> studentList = students.ToList();
             studentList.Sort();
+            var newStudentList =  studentList.FindAll(st => st.Average > 80);
+         //   studentList.Sum();
+
+
+            String str = "Hello";
+            String str2 = " World";
+
+           str += str2 += " \n";
+
+            char c = str[3];
             
+            DateTime dt =  Convert.ToDateTime("11/11/2019");
+            //str[3] = 'a';
+            var anonymousObject = new { Id = 2222, Name = "Yossi" , Age = 30};
+            var anonymousObject2 = new { Id = 2222, Name = "Yair" };
 
-
+            InitializeComponent();
         }
 
+        
         private void pbConsole_Click(object sender, RoutedEventArgs e)
         {
             //int num2;
@@ -73,8 +88,10 @@ namespace week2
                 tbConsole.Text = tbConsole.Text + (p as Student).Average;
 
             }
-            
 
+            tbConsole.Text += dp_StartVacation.SelectedDate.ToString();
+            
+            DateTime dateTime = dp_StartVacation.SelectedDate.Value;
         }
     }
 }

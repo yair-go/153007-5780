@@ -9,6 +9,7 @@
     <Grid>
         <TextBox x:Name="tbConsole" HorizontalAlignment="Left" Height="51" Margin="199,201,0,0" TextWrapping="Wrap" Text="Hello WPF" VerticalAlignment="Top" Width="357"/>
         <Button x:Name="pbConsole" Content="Submit" HorizontalAlignment="Left" Margin="589,232,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.69,-0.92" Click="pbConsole_Click"/>
+        <DatePicker x:Name="dp_StartVacation" HorizontalAlignment="Left" Margin="199,93,0,0" VerticalAlignment="Top" DisplayDateStart="2019-10-25" DisplayDateEnd="2019-12-31"/>
 
     </Grid>
 </Window>
