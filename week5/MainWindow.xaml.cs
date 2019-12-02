@@ -26,5 +26,28 @@ namespace week5
             Student student = new Student();
             InitializeComponent();
         }
+
+        private void pb_hello_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello WPF");
+
+        }
+
+        private void pb_hello_GotFocus(object sender, RoutedEventArgs e)
+        {
+            pb_hello.Content = "Wow !";
+        }
+
+        private void pb_bye_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Have a nice day");
+        }
+
+        private void pb_wow_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Wow");
+        }
+
+ 
     }
 }

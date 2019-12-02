@@ -33,6 +33,7 @@ namespace week2
          
             List<Student> studentList = students.ToList();
             studentList.Sort();
+            //studentList.FindAll()
             var newStudentList =  studentList.FindAll(st => st.Average > 80);
          //   studentList.Sum();
 

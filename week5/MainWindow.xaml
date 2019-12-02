@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:week5"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Week 5" Height="450" Width="800">
     <Grid>
-        
+
+        <Button x:Name="pb_hello" Content="Hello" HorizontalAlignment="Left" Margin="229,206,0,0" VerticalAlignment="Top" Width="75" Click="pb_hello_Click" GotFocus="pb_hello_GotFocus" MouseEnter="pb_hello_GotFocus"/>
+        <Button x:Name="pb_bye"  Margin="365,206,354,182" Click="pb_bye_Click">Bye bye</Button>
+        <Button x:Name="pb_wow" Margin="468,206,255,182" Content="Wow!" Click="pb_wow_Click"/>
     </Grid>
 </Window>
